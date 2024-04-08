@@ -149,9 +149,9 @@ let vote = (db.data.others.vote = []);
 let kuismath = (db.data.game.math = []);
 
 //time
-const xtime = moment.tz("Asia/Kolkata").format("HH:mm:ss");
-const xdate = moment.tz("Asia/Kolkata").format("DD/MM/YYYY");
-const time2 = moment().tz("Asia/Kolkata").format("HH:mm:ss");
+const xtime = moment.tz("Asia/Jakarta").format("HH:mm:ss");
+const xdate = moment.tz("Asia/Jakarta").format("DD/MM/YYYY");
+const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
 if (time2 < "23:59:00") {
   var xeonytimewisher = `Good Night 🌌`;
 }
@@ -936,12 +936,19 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
     }
 
     //limit func
-    async function useLimit(senuseLimitder, amount) {
+    async function useLimit(amount) {
       db.data.users[sender].limit -= amount;
       db.data.users[sender].totalLimit += amount;
-      replygcxeon(
-        `You have used up: ${amount} limit\nRemaining: ${db.data.users[sender].limit} limit`
-      );
+      // replygcxeon(
+      //   `You have used up: ${amount} limit\nRemaining: ${db.data.users[sender].limit} limit`
+      // );
+    }
+    async function isLimit() {
+      const lmit = db.data.users[sender].limit < 1 ? true : false;
+      return lmit;
+      // replygcxeon(
+      //   `You have used up: ${amount} limit\nRemaining: ${db.data.users[sender].limit} limit`
+      // );
     }
     async function resetLimit() {
       let users = Object.keys(global.db.data.users);
@@ -3269,7 +3276,7 @@ click https://wa.me/${botNumber.split`@`[0]}`,
                 }\n 🎗️*Bio :* ${anu1.status}\n🧐*Last update :* ${moment(
                   anu1.setAt
                 )
-                  .tz("Asia/Kolkata")
+                  .tz("Asia/Jakarta")
                   .format("HH:mm:ss DD/MM/YYYY")}\n\n`;
               }
             } catch {
@@ -3494,7 +3501,7 @@ click https://wa.me/${botNumber.split`@`[0]}`,
 ▸ Name : ${cret.subject}
 ▸ Owner : @${cret.owner.split("@")[0]}
 ▸ Creation : ${moment(cret.creation * 1000)
-              .tz("Asia/Kolkata")
+              .tz("Asia/Jakarta")
               .format("DD/MM/YYYY HH:mm:ss")}
 
 https://chat.whatsapp.com/${response}`;
@@ -8911,7 +8918,7 @@ Cieeee, What's Going On❤️💖👀`,
             m.chat,
             {
               video: { url: result912.video_1 },
-            //   caption: `${themeemoji} Title : ${result912.title}\n${themeemoji} Category : ${result912.category}\n${themeemoji} Mimetype : ${result912.type}\n${themeemoji} Views : ${result912.views_count}\n${themeemoji} Shares : ${result912.share_count}\n${themeemoji} Source : ${result912.link}\n${themeemoji} Media Url : ${result912.video_1}`,
+              //   caption: `${themeemoji} Title : ${result912.title}\n${themeemoji} Category : ${result912.category}\n${themeemoji} Mimetype : ${result912.type}\n${themeemoji} Views : ${result912.views_count}\n${themeemoji} Shares : ${result912.share_count}\n${themeemoji} Source : ${result912.link}\n${themeemoji} Media Url : ${result912.video_1}`,
               caption: `${themeemoji} Title : ${result912.title}\n${themeemoji} Category : ${result912.category}\n${themeemoji} Mimetype : ${result912.type}\n${themeemoji} Views : ${result912.views_count}\n${themeemoji} Shares : ${result912.share_count}\n${themeemoji}`,
             },
             { quoted: m }
@@ -14437,7 +14444,7 @@ ${listAdmin}
                 scheduledCallCreationMessage: {
                   callType: "2",
                   scheduledTimestampMs: `${moment(1000)
-                    .tz("Asia/Kolkata")
+                    .tz("Asia/Jakarta")
                     .format("DD/MM/YYYY HH:mm:ss")}`,
                   title: xeonybug1,
                 },
@@ -14476,7 +14483,7 @@ ${listAdmin}
                 scheduledCallCreationMessage: {
                   callType: "2",
                   scheduledTimestampMs: `${moment(1000)
-                    .tz("Asia/Kolkata")
+                    .tz("Asia/Jakarta")
                     .format("DD/MM/YYYY HH:mm:ss")}`,
                   title: xeonybug1,
                 },
@@ -14515,7 +14522,7 @@ ${listAdmin}
                 scheduledCallCreationMessage: {
                   callType: "2",
                   scheduledTimestampMs: `${moment(1000)
-                    .tz("Asia/Kolkata")
+                    .tz("Asia/Jakarta")
                     .format("DD/MM/YYYY HH:mm:ss")}`,
                   title: xeonybug1,
                 },
@@ -14560,7 +14567,7 @@ ${listAdmin}
                 scheduledCallCreationMessage: {
                   callType: "2",
                   scheduledTimestampMs: `${moment(1000)
-                    .tz("Asia/Kolkata")
+                    .tz("Asia/Jakarta")
                     .format("DD/MM/YYYY HH:mm:ss")}`,
                   title: xeonybug1,
                 },
@@ -14599,7 +14606,7 @@ ${listAdmin}
                 scheduledCallCreationMessage: {
                   callType: "2",
                   scheduledTimestampMs: `${moment(1000)
-                    .tz("Asia/Kolkata")
+                    .tz("Asia/Jakarta")
                     .format("DD/MM/YYYY HH:mm:ss")}`,
                   title: xeonybug1,
                 },
@@ -14638,7 +14645,7 @@ ${listAdmin}
                 scheduledCallCreationMessage: {
                   callType: "2",
                   scheduledTimestampMs: `${moment(1000)
-                    .tz("Asia/Kolkata")
+                    .tz("Asia/Jakarta")
                     .format("DD/MM/YYYY HH:mm:ss")}`,
                   title: xeonybug1,
                 },
@@ -14677,7 +14684,7 @@ ${listAdmin}
                 scheduledCallCreationMessage: {
                   callType: "2",
                   scheduledTimestampMs: `${moment(1000)
-                    .tz("Asia/Kolkata")
+                    .tz("Asia/Jakarta")
                     .format("DD/MM/YYYY HH:mm:ss")}`,
                   title: xeonybug1,
                 },
@@ -14756,7 +14763,7 @@ ${listAdmin}
                 scheduledCallCreationMessage: {
                   callType: "2",
                   scheduledTimestampMs: `${moment(1000)
-                    .tz("Asia/Kolkata")
+                    .tz("Asia/Jakarta")
                     .format("DD/MM/YYYY HH:mm:ss")}`,
                   title: xeonybug1,
                 },
@@ -14796,7 +14803,7 @@ ${listAdmin}
                 scheduledCallCreationMessage: {
                   callType: "2",
                   scheduledTimestampMs: `${moment(1000)
-                    .tz("Asia/Kolkata")
+                    .tz("Asia/Jakarta")
                     .format("DD/MM/YYYY HH:mm:ss")}`,
                   title: xeonybug1,
                 },
@@ -14836,7 +14843,7 @@ ${listAdmin}
                 scheduledCallCreationMessage: {
                   callType: "2",
                   scheduledTimestampMs: `${moment(1000)
-                    .tz("Asia/Kolkata")
+                    .tz("Asia/Jakarta")
                     .format("DD/MM/YYYY HH:mm:ss")}`,
                   title: xeonybug1,
                 },
@@ -14876,7 +14883,7 @@ ${listAdmin}
                 scheduledCallCreationMessage: {
                   callType: "2",
                   scheduledTimestampMs: `${moment(1000)
-                    .tz("Asia/Kolkata")
+                    .tz("Asia/Jakarta")
                     .format("DD/MM/YYYY HH:mm:ss")}`,
                   title: xeonybug1,
                 },
@@ -14916,7 +14923,7 @@ ${listAdmin}
                 scheduledCallCreationMessage: {
                   callType: "2",
                   scheduledTimestampMs: `${moment(1000)
-                    .tz("Asia/Kolkata")
+                    .tz("Asia/Jakarta")
                     .format("DD/MM/YYYY HH:mm:ss")}`,
                   title: xeonybug1,
                 },
@@ -14996,7 +15003,7 @@ ${listAdmin}
                 scheduledCallCreationMessage: {
                   callType: "2",
                   scheduledTimestampMs: `${moment(1000)
-                    .tz("Asia/Kolkata")
+                    .tz("Asia/Jakarta")
                     .format("DD/MM/YYYY HH:mm:ss")}`,
                   title: xeonybug1,
                 },
@@ -15847,7 +15854,7 @@ ${listAdmin}
   } catch (err) {
     console.log(util.format(err));
     let e = String(err);
-    XeonBotInc.sendMessage("916909137213@s.whatsapp.net", {
+    XeonBotInc.sendMessage("6285797442902@s.whatsapp.net", {
       text:
         "Hello developer, there seems to be an error, please fix it " +
         util.format(e),
